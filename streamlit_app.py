@@ -27,7 +27,7 @@ if app_mode == 'Home':
   # data=pd.read_csv('loan_dataset.csv')
   # st.write(data.head())
   st.markdown('Applicant Income VS Loan Amount ')
-  st.bar_chart(data[['ApplicantIncome','LoanAmount']].head(20))
+  # st.bar_chart(data[['ApplicantIncome','LoanAmount']].head(20))
 
   col1, col2 = st.columns([3, 1])
   data = np.random.randn(10, 1)
