@@ -13,9 +13,18 @@ def get_fvalue(val):
     if val == key:
       return value
       
-def get_value(val,my_dict):
+def get_value(val, my_dict):
   for key,value in my_dict.items():
     if val == key:
       return value
       
 app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction']) #two pages
+
+if app_mode == 'Home':
+  st.title('LOAN PREDICTION :')
+  st.image('loan_image.jpg')
+  st.markdown('Dataset :')
+  data=pd.read_csv('loan_dataset.csv')
+  st.write(data.head())
+  st.markdown('Applicant Income VS Loan Amount ')
+  st.bar_chart(data[['ApplicantIncome','LoanAmount']].head(20))
