@@ -24,8 +24,8 @@ if app_mode == 'Home':
   st.title('LOAN PREDICTION :')
   # st.image('loan_image.jpg')
   st.markdown('Dataset :')
-  data=pd.read_csv('loan_dataset.csv')
-  st.write(data.head())
+  # data=pd.read_csv('loan_dataset.csv')
+  # st.write(data.head())
   st.markdown('Applicant Income VS Loan Amount ')
   st.bar_chart(data[['ApplicantIncome','LoanAmount']].head(20))
 
